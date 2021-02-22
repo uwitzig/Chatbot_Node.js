@@ -1,0 +1,17 @@
+******* STEP 73 **********
+ibmcloud login -r eu-gb
+
+ibmcloud target --cf
+
+ibmcloud resource groups
+
+ibmcloud target -g Default
+
+ibmcloud resource service-instance-create workshopDb cloudantnosqldb lite eu-gb -p '{"legacyCredentials": true}'
+
+ibmcloud resource service-alias-create cfworkshopdb --instance-name workshopDb
+
+ibmcloud cf create-service-key cfworkshopdb workshopkey
+
+ibmcloud plugin install Cloud-Functions -r bluemix
+
