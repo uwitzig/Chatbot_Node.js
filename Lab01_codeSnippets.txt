@@ -15,3 +15,6 @@ ibmcloud cf create-service-key cfworkshopdb workshopkey
 
 ibmcloud plugin install Cloud-Functions -r bluemix
 
+ibmcloud wsk package refresh
+
+
